@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    build: ./
+    restart: always
+    command: go run .
+    ports:
+      - "8000:8000"
+    environment:
+      - layEggsMinCount=2
+      - layEggsMaxCount=5
+      - layEggsSecInterval=2
+      - getEggsMinCount=10
+      - getEggsMaxCount=20
+      - getEggsSecInterval=10
